@@ -40,7 +40,9 @@ const thoughtController = {
     },
     removeThought({params}, res){
         Thought.findOneAndDelete({_id: params.thoughtId})
-            .then(thoughtData => res.json(thoughtData))
+            .then(thoughtData => {
+                res.json(thoughtData)
+            })
             .catch(err => res.json(err));
     },
     addReaction({params, body}, res){

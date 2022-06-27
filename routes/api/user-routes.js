@@ -18,7 +18,7 @@ router
     .route('/:userId')
     .get(getUserById)
     .put(updateUser)
-    .delete(removeUser);    //User.deleteMany({thoughts})
+    .delete(removeUser);    
 // api/users/:userId/friends/:friendId
 router
     .route('/:userId/friends/:friendId')
